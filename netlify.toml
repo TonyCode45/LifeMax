@@ -1,0 +1,11 @@
+[build]
+  command = "cd tonycode && npm ci && npm run build"
+  publish = "tonycode/dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
