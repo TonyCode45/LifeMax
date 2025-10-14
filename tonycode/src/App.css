@@ -1,0 +1,14 @@
+/* Global overrides are intentionally minimal. Layout and theming are handled
+   through Tailwind tokens defined in index.css. */
+
+:root {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}

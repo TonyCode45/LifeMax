@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+    --card-glass: 0 0% 100% / 0.7;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 13% 46%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 142 76% 36%;
+
+    /* Border Radius Tokens */
+    --radius: 1rem;
+    --radius-card: 1.25rem;
+    --radius-button: 0.75rem;
+    --radius-avatar: 9999px;
+
+    /* Spacing Tokens */
+    --space-card: 1.5rem;
+    --space-card-compact: 1rem;
+    --space-section: 1.5rem;
+
+    /* Avatar Sizes */
+    --avatar-sm: 2rem;
+    --avatar-md: 2.5rem;
+    --avatar-lg: 4rem;
+    --avatar-xl: 5rem;
+
+    /* Progress & Chart Tokens */
+    --progress-height: 0.5rem;
+    --progress-ring-stroke: 12;
+    --chart-bar-height: 2.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(158 64% 52%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 100% 60%), hsl(262 83% 58%));
+    --gradient-wellness: linear-gradient(135deg, hsl(142 76% 36%), hsl(210 100% 60%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 99%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.8), hsl(210 20% 99% / 0.6));
+    
+    /* Shadows - Hierarchy Levels */
+    --shadow-sm: 0 1px 2px hsl(220 20% 15% / 0.05);
+    --shadow-card: 0 2px 8px -2px hsl(220 20% 15% / 0.08);
+    --shadow-elevated: 0 8px 24px -4px hsl(220 20% 15% / 0.12);
+    --shadow-float: 0 12px 32px -8px hsl(220 20% 15% / 0.16);
+    --shadow-glow: 0 0 32px hsl(142 76% 36% / 0.2);
+    --shadow-glow-accent: 0 0 24px hsl(262 83% 58% / 0.25);
+
+    /* Glass Effect */
+    --glass-blur: blur(12px);
+    --glass-border: 1px solid hsl(0 0% 100% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 26% 14%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 24% 18%;
+    --card-foreground: 210 20% 98%;
+    --card-glass: 220 24% 22% / 0.6;
+
+    --popover: 220 24% 18%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 24%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 20% 24%;
+    --muted-foreground: 220 13% 65%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 28%;
+    --input: 220 20% 28%;
+    --ring: 142 76% 36%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(158 64% 52%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 100% 60%), hsl(262 83% 58%));
+    --gradient-wellness: linear-gradient(135deg, hsl(142 76% 36%), hsl(210 100% 60%));
+    --gradient-card: linear-gradient(180deg, hsl(220 24% 18%), hsl(220 26% 16%));
+    --gradient-glass: linear-gradient(135deg, hsl(220 24% 22% / 0.8), hsl(220 26% 18% / 0.6));
+    
+    /* Shadows - Hierarchy Levels */
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.2);
+    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 8px 24px -4px hsl(0 0% 0% / 0.4);
+    --shadow-float: 0 12px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 32px hsl(142 76% 36% / 0.3);
+    --shadow-glow-accent: 0 0 24px hsl(262 83% 58% / 0.35);
+
+    /* Glass Effect */
+    --glass-blur: blur(16px);
+    --glass-border: 1px solid hsl(0 0% 100% / 0.1);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .glass-card {
+    background: hsl(var(--card-glass));
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+  }
+
+  .tap-effect {
+    transition: transform 0.1s ease-out;
+  }
+
+  .tap-effect:active {
+    transform: scale(0.97);
+  }
+
+  .card-interactive {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .card-interactive:active {
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* High Contrast Mode */
+  .high-contrast {
+    --primary: 142 100% 30%;
+    --accent: 262 100% 50%;
+    --muted: 220 13% 30%;
+    --border: 220 13% 70%;
+  }
+
+  .high-contrast.dark {
+    --primary: 142 100% 45%;
+    --accent: 262 100% 65%;
+    --muted: 220 13% 80%;
+    --border: 220 13% 50%;
+  }
+
+  /* Large Text Mode */
+  .large-text {
+    font-size: 112.5%;
+  }
+
+  .large-text .text-sm {
+    font-size: 1rem;
+  }
+
+  .large-text .text-xs {
+    font-size: 0.875rem;
+  }
+
+  /* Reduced Motion */
+  .reduce-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    text-align: right;
+  }
+
+  [dir="rtl"] .flex {
+    flex-direction: row-reverse;
+  }
+
+  [dir="rtl"] .space-x-2 > * + * {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}
